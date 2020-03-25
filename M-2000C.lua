@@ -6,9 +6,9 @@
 -- |____/ \____|____/  |____|___\___/|____/ 
 --                                          
 --     LIBRARY     	:    Mirage 2000C RAZBAM
---     CONTIBUTORS 	:    Exo7, Ergo, Matchstick, WarLord 
+--     CONTIBUTORS 	:    Exo7, Ergo 
 --     LINK        	:    https://github.com/Exo7/DCS_BIOS-M2000C_Library/releases/latest
---     VERSION     	:    v1.25
+--     VERSION     	:    v1.20
 --
 -----------------------------------------------------------
 -- Release log : 
@@ -60,15 +60,6 @@
 --
 -- v1.23 by Matchstick
 --		Added Indikators
---
--- v1.24 by WarLord
---		Beta Patch adjusts 13.11.2019
---
--- v1.25 by WarLord
---		Comparing to Helios
---
--- v1.26 by WarLord
---		fixing the BCD Wheels
 -----------------------------------------------------------
 
 BIOS.protocol.beginModule("M-2000C", 0x7200)
@@ -1079,23 +1070,22 @@ defineIndicatorLight("HYD_FAIL", 511, "TEST PANEL", "O - TEST - HYD Indicator Li
 defineIndicatorLight("TEST_ROUGE", 512, "TEST PANEL", "O - TEST - Red Indicator Light")
 defineIndicatorLight("TEST_VERT", 513, "TEST PANEL", "O - TEST - Green Indicator Light")
 
--- VHF RADIO
-defineMultipositionSwitch("VHF_MODE", 19, 3950, 950,  7, 0.10, "VHF RADIO", "I - VHF - MODE Switch")
-defineMultipositionSwitch("VHF_CH_SEL", 19, 3951, 951, 20, 0.05, "VHF RADIO", "I - VHF - Channel Selector")
-definePushButton("VHF_MEM_CLR", 19, 3952, 952, "VHF RADIO", "I - VHF - MEM/CLR Button")
-definePushButton("VHF_VLD_XFR", 19, 3953, 953, "VHF RADIO", "I - VHF -  VLD/XFR Button")
-definePushButton("VHF_1_READ", 19, 3954, 954, "VHF RADIO", "I - VHF - 1/READ Button")
-definePushButton("VHF_2_SQL", 19, 3955, 955, "VHF RADIO", "I - VHF - 2/SQL Button")
-definePushButton("VHF_3_GR",	19,	3956, 956, "VHF RADIO", "I - VHF - 3/GR Button")
-definePushButton("VHF_4", 19, 3957, 957, "VHF RADIO", "I - VHF - 4 Button")
-definePushButton("VHF_5_20_LOW",	19,	3958, 958, "VHF RADIO", "I - VHF - 5/20/LOW Button")
-definePushButton("VHF_6_TONE", 19, 3959, 959, "VHF RADIO", "I - VHF - 6/TONE Button")
-definePushButton("VHF_7", 19, 3960, 960, "VHF RADIO", "I - VHF - 7 Button")
-definePushButton("VHF_8_TOD", 19, 3961, 961, "VHF RADIO", "I - VHF - 8/TOD Button")
-definePushButton("VHF_9_ZERO", 19, 3962, 962, "VHF RADIO", "I - VHF - 9/ZERO Button")
-definePushButton("VHF_0", 19, 3963, 963, "VHF RADIO", "I - VHF - 0 Button")
-definePushButton("VHF_CONF", 19, 3964, 964, "VHF RADIO", "I - VHF - CONF Button")
-defineString("VHF_FREQUENCY", getVHFFrequency, 5, "VHF RADIO", "O - VHF - Frequency Report Display")
+-- U/VHF RADIO
+defineTumb("UVHF_10_M_SEL", 19, 3441, 441, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 10 MHz Selector")
+defineTumb("UVHF_1_M_SEL", 19, 3442, 442, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 1 MHz Selector")
+defineTumb("UVHF_100_K_SEL", 19, 3443, 443, 0.1, {0, 1}, nil, true, "U/VHF RADIO", "I - UVHF - 100 KHz Selector")
+defineTumb("UVHF_MODE_SW_1", 19, 3446, 446, 0.25, {0, 1}, nil, false, "U/VHF RADIO", "I - UVHF - Mode Selector")
+defineTumb("UVHF_M_P_G_SEL", 19, 3448, 448, 0.5, {0, 1}, nil, false, "U/VHF RADIO", "I - UVHF - M/P/G Selector")
+defineTumb("UVHF_100_M_SEL", 19, 3440, 440, 0.1, {0.1, 0.3}, nil, true, "U/VHF RADIO", "I - UVHF - 100 MHz Selector")
+defineTumb("UVHF_25_K_SEL", 19, 3444, 444, 0.1, {0.1, 0.3}, nil, true, "U/VHF RADIO", "I - UVHF - 25 KHz Selector")
+defineToggleSwitch("UVHF_TEST_SW", 19, 3437, 437, "U/VHF RADIO", "I - UVHF - TEST Switch")
+defineToggleSwitch("UVHF_SIL_SW", 19, 3439, 439, "U/VHF RADIO", "I - UVHF - SIL Switch")
+defineSetCommandTumb("UVHF_PRESET_KNOB", 19, 3445, 445, 0.05, {0.05, 1}, nil, true, "U/VHF RADIO", "Preset Knob UVHF")
+defineToggleSwitch("UVHF_PWR_5W_25W_SW", 19, 3447, 447, "U/VHF RADIO", "I - UVHF - Power 5W/25W Switch")
+defineTumb("UVHF_E+A2_SW", 19, 3438, 438, 1, {-1, 1}, nil, false, "U/VHF RADIO", "I - UVHF - E+A2 Switch")
+defineFloat	("UVHF_ONES_PRESET", 189, {0, 1}, "U/VHF RADIO", "O - UVHF - Preset Display ONES")
+defineFloat	("UVHF_TENS_PRESET", 190, {0, 1}, "U/VHF RADIO", "O - UVHF - Preset Display TENS")
+defineString("VHF_FREQUENCY", getVHFFrequency, 5, "U/VHF RADIO", "O - UVHF - Frequency Report Display")
 
 -- UHF RADIO
 defineTumb("UHF_MODE_SW", 20, 3433, 433, 0.25, {0, 1}, nil, false, "UHF RADIO", "I - UHF - Mode Selector")
