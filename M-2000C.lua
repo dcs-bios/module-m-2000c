@@ -358,7 +358,7 @@ local function getPCNDispL() -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name:sub(0,10) == "text_PCN_L"
+      if name:sub(0,10) == "PCN_UL_DIGITS"
         then
         value = "        "..value
         return value:sub(-8)
