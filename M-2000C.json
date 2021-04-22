@@ -7722,11 +7722,11 @@
                                                                                        "type": "string"
                                                                             } ]
                                                         },
-                                          "PCN_DISP_L": {
+                                          "PCN_UL_DIGITS": {
                                                                 "category": "PCN",
                                                             "control_type": "display",
                                                              "description": "O - PCN - Left Display",
-                                                              "identifier": "PCN_DISP_L",
+                                                              "identifier": "PCN_UL_DIGITS",
                                                                   "inputs": [  ],
                                                                  "outputs": [ {
                                                                                     "address": 29420,
