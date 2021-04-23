@@ -7726,7 +7726,7 @@
                                                                 "category": "PCN",
                                                             "control_type": "display",
                                                              "description": "O - PCN - Left Display",
-                                                              "identifier": "PCN_UL_DIGITS",
+                                                              "identifier": "PCN_DISP_L",
                                                                   "inputs": [  ],
                                                                  "outputs": [ {
                                                                                     "address": 29420,
