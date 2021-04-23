@@ -7733,7 +7733,7 @@
                                                                                 "description": "O - PCN - Left Display",
                                                                                  "max_length": 8,
                                                                                      "suffix": "",
-                                                                                       "type": "integer"
+                                                                                       "type": "string"
                                                                             } ]
                                                         },
                                        "PCN_DISP_PREP": {
