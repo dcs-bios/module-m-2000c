@@ -358,7 +358,7 @@ local function getPCNDispL() -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name:sub(0,13) == "PCN_UL_DIGITS"
+      if name:sub(0,13) == "PCN_UL_DIGITS"        -- fix by espresso pour dcs V2.7
         then
         value = "        "..value
         return value:sub(-8)
@@ -373,7 +373,7 @@ local function getPCNDispR() -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name:sub(0,10) == "text_PCN_R"
+      if name:sub(0,10) == "PCN_UR_DIGITS"		-- fix by espresso pour dcs V2.7
         then
         value = "        "..value
         return value:sub(-9)
@@ -390,22 +390,22 @@ local function getPCNDigitR()  -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_EST"
+      if name == "PCN_UR_E"
         then
         count = count + 1
         ret="E"
       end
-      if name == "text_PCN_OUEST"
+      if name == "PCN_UR_W"
         then
         count = count + 1
         ret="W"
       end
-      if name == "text_PCN_PLUS_R"
+      if name == "PCN_UR_P"
         then
         count = count + 1
         ret="+"
       end
-      if name == "text_PCN_MOINS_R"
+      if name == "PCN_UR_M"
         then
         count = count + 1
         ret="-"
@@ -423,22 +423,22 @@ local function getPCNDigitL()  -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_NORD"
+      if name == "PCN_UL_N"
         then
         count = count + 1
         ret="N"
       end
-      if name == "text_PCN_SUD"
+      if name == "PCN_UL_S"
         then
         count = count + 1
         ret="S"
       end
-      if name == "text_PCN_PLUS_L"
+      if name == "PCN_UL_P"
         then
         count = count + 1
         ret="+"
       end
-      if name == "text_PCN_MOINS_L"
+      if name == "PCN_UL_M"
         then
         count = count + 1
         ret="-"
@@ -458,19 +458,19 @@ local function getPCN2DigitR()  -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_EST"
+      if name == "PCN_UR_E"
         then
         east="E"
       end
-      if name == "text_PCN_OUEST"
+      if name == "PCN_UR_O"
         then
         west="W"
       end
-      if name == "text_PCN_PLUS_R"
+      if name == "PCN_UR_P"
         then
         plus="+"
       end
-      if name == "text_PCN_MOINS_R"
+      if name == "PCN_UR_M"
         then
         minus="-"
       end
@@ -488,19 +488,19 @@ local function getPCN2DigitL()  -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_NORD"
+      if name == "PCN_UL_N"
         then
         north="N"
       end
-      if name == "text_PCN_SUD"
+      if name == "PCN_UL_S"
         then
         south="S"
       end
-      if name == "text_PCN_PLUS_L"
+      if name == "PCN_UL_P"
         then
         plus="+"
       end
-      if name == "text_PCN_MOINS_L"
+      if name == "PCN_UL_M"
         then
         minus="-"
       end
@@ -514,13 +514,7 @@ local function getPCNDispDest()  -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_BR2"
-        then
-        value = "  "..value
-        return value:sub(-2)
-      end
-
-      if name == "text_PCN_eBR2"
+      if name == "PCN_BR_DIGITS"
         then
         value = "  "..value
         return value:sub(-2)
@@ -535,13 +529,7 @@ local function getPCNDispPrep() -- by Ergo
    while true do
         local name, value = m()
         if not name then break end
-      if name == "text_PCN_BR1"
-        then
-        value = "  "..value
-        return value:sub(-2)
-      end
-
-      if name == "text_PCN_eBR1"
+      if name == "PCN_BL_DIGITS"
         then
         value = "  "..value
         return value:sub(-2)
