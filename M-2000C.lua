@@ -373,7 +373,7 @@ local function getPCNDispR() -- by Ergo																	-- fix by espresso pour 
    while true do
         local name, value = m()
         if not name then break end
-      if name:sub(0,10) == "PCN_UR_DIGITS"		
+      if name:sub(0,13) == "PCN_UR_DIGITS"		
         then
         value = "        "..value
         return value:sub(-9)
