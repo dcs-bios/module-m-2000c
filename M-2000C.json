@@ -7556,7 +7556,7 @@
                                                                                   "max_value": 1,
                                                                                    "shift_by": 8,
                                                                                      "suffix": "",
-                                                                                       "type": "integer"
+                                                                                       "type": "float"
                                                                             } ]
                                                         },
                                      "INS_PREV_WP_BTN": {
