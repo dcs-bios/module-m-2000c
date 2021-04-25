@@ -7545,31 +7545,18 @@
                                                         },
                                    "INS_PREP_SW_LIGHT": {
                                                                 "category": "PCN",
-                                                            "control_type": "analog_gauge",
+                                                            "control_type": "led",
                                                              "description": "O - PCN - PREP Button Light",
                                                               "identifier": "INS_PREP_SW_LIGHT",
                                                                   "inputs": [  ],
                                                                  "outputs": [ {
                                                                                     "address": 29396,
-                                                                                "description": "0 if light is off, 65535 if light is on",
-                                                                                       "mask": 65535,
-                                                                                  "max_value": 65535,
-                                                                                   "shift_by": 0,
+                                                                                "description": "0 if light is off, 1 if light is on",
+                                                                                       "mask": 256,
+                                                                                  "max_value": 1,
+                                                                                   "shift_by": 8,
                                                                                      "suffix": "",
                                                                                        "type": "integer"
-																					   
-																					   
-															   
-																					   
-																					   
-																					   
-																					   
-																					   
-																					   
-																					   
-																					   
-																					   
-																					   
                                                                             } ]
                                                         },
                                      "INS_PREV_WP_BTN": {
