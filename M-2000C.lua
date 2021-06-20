@@ -177,7 +177,7 @@ local function getPCAUR1Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_UR1"
+		if name == "PCA_LCD_1_0"
         then
         value = "   "..value
         return value:sub(-3)
@@ -192,7 +192,7 @@ local function getPCAUR2Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_UR2"
+		if name == "PCA_LCD_1_1"
         then
         value = "   "..value
         return value:sub(-3)
@@ -207,7 +207,7 @@ local function getPCAUR3Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_UR3"
+		if name == "PCA_LCD_1_2"
         then
         value = "   "..value
         return value:sub(-3)
@@ -222,7 +222,7 @@ local function getPCAUR4Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_UR4"
+		if name == "PCA_LCD_1_3"
         then
         value = "   "..value
         return value:sub(-3)
@@ -237,7 +237,7 @@ local function getPCAUR5Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_UR5"
+		if name == "PCA_LCD_1_4"
         then
         value = "   "..value
         return value:sub(-3)
@@ -253,7 +253,7 @@ local function getPCABR1Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_BR1"
+		if name == "PCA_LCD_2_0"
         then
         value = "   "..value
         return value:sub(-3)
@@ -268,7 +268,7 @@ local function getPCABR2Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_BR2"
+		if name == "PCA_LCD_2_1"
         then
         value = "   "..value
         return value:sub(-3)
@@ -283,7 +283,7 @@ local function getPCABR3Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_BR3"
+		if name == "PCA_LCD_2_2"
         then
         value = "   "..value
         return value:sub(-3)
@@ -298,7 +298,7 @@ local function getPCABR4Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_BR4"
+		if name == "PCA_LCD_2_3"
         then
         value = "   "..value
         return value:sub(-3)
@@ -313,7 +313,7 @@ local function getPCABR5Disp()
 	while true do
         local name, value = m()
         if not name then break end
-		if name == "text_PCA_BR5"
+		if name == "PCA_LCD_2_4"
         then
         value = "   "..value
         return value:sub(-3)
