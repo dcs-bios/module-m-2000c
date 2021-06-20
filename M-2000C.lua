@@ -1,7 +1,7 @@
 -----------------------------------------------------------                                         
 --     LIBRARY     	:    Mirage 2000C RAZBAM
---     CONTIBUTORS 	:    Exo7, Ergo, Matchstick, WarLord 
---     VERSION     	:    v1.27a
+--     CONTIBUTORS 	:    Exo7, Ergo, Matchstick, WarLord, Espresso 
+--     VERSION     	:    v1.28
 -----------------------------------------------------------
 -- Release log : 
 -- v1.12 by Exo7 
@@ -64,6 +64,9 @@
 --
 -- v1.27a by WarLord, Matchstick
 --		fixing readouts;UHF Preset fixed;cleanup
+--v1.28 by espresso 
+--		fixing display pca et pcn 
+--		compatible dcs v2.7
 -----------------------------------------------------------
 
 BIOS.protocol.beginModule("M-2000C", 0x7200)
